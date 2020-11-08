@@ -22,12 +22,17 @@ class App extends Component {
 
   get selectedQuote() {
     if (!this.state.quotes.length || !Number.isInteger(this.state.selectedQuoteIndex)) {
-      return;
+      return undefined;
     }
     return this.state.quotes[this.state.selectedQuoteIndex];
   }
 
-  selectQuoteIndex() {
+  /**
+   * Returns an integer representing an index in state.quote
+   * If state.quotes = empty return undefined
+   */
+
+  generateNewQuoteIndex() {
     if (!this.state.quotes.length) {
       return;
     }
@@ -35,7 +40,7 @@ class App extends Component {
   }
 
   assignNewQuoteIndex() {
-    this.setState({ selectedQuoteIndex: this.selectQuoteIndex() });
+    this.setState({ selectedQuoteIndex: this.generateNewQuoteIndex() });
   }
 
   render() {
