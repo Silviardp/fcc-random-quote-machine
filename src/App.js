@@ -3,6 +3,14 @@ import './App.css';
 import Button from './components/button';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      quote: [],
+      selectedQuoteIndex: null,
+    }
+  }
+
   nextQuoteClickHandler() {
     console.log('hi')
   }
