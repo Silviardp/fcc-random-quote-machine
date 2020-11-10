@@ -14,15 +14,16 @@ const QuoteMachine = (props) => (
       {
         props.selectedQuote ?
         (
-          <Typography>
-            {props.selectedQuote.quote} - {props.selectedQuote.author}
+          <Typography id="text">
+            {props.selectedQuote.quote} - <span id="author">{props.selectedQuote.author}</span>
           </Typography>
         ) : null
       }
       </CardContent>
       <CardActions>
-        <Button variant="outlined" color="secondary" size="small" onClick={props.assignNewQuoteIndex}>Next Quote</Button>
+        <Button id="new-quote" variant="outlined" color="secondary" size="small" onClick={props.assignNewQuoteIndex}>Next Quote</Button>
         <IconButton
+          id="tweet-quote"
           target="_blank"
           href={`https://twitter.com/intent/tweet?text=${props.selectedQuote.quote}&hashtags=sdpr90`}
         >
