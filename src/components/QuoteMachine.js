@@ -18,7 +18,7 @@ const QuoteMachine = (props) => (
       }
       </CardContent>
       <CardActions>
-        <Button size="small" onClick={props.assignNewQuoteIndex}>Next Quote</Button>
+        <Button variant="outlined" color="secondary" size="small" onClick={props.assignNewQuoteIndex}>Next Quote</Button>
       </CardActions>
   </Card>
 );

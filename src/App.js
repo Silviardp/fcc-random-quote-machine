@@ -8,7 +8,8 @@ const styles = {
   container: {
     display: 'flex',
     height: '100vh',
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor: '#cfe8fc'
   }
 };
 
