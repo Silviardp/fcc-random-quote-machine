@@ -1,9 +1,18 @@
 import React from 'react';
+import Typography from '@material-ui/core/Typography'
 import Button from "./Button";
 
 const QuoteMachine = (props) => (
   <React.Fragment>
-    {props.selectedQuote ? `"${props.selectedQuote.quote}" - ${props.selectedQuote.author}` : ''}
+    {
+      props.selectedQuote ?
+      (
+        <Typography>
+          {props.selectedQuote.quote} - {props.selectedQuote.author}
+        </Typography>
+      ) : null
+    }
+
     <Button buttonDisplayName="Next Quote" clickHandler={props.assignNewQuoteIndex} />
   </React.Fragment>
 );

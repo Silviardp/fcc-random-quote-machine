@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { random } from 'lodash';
+import 'typeface-roboto';
 import './App.css';
 import QuoteMachine from './components/QuoteMachine';
 
